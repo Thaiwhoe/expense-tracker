@@ -1,0 +1,11 @@
+POST http://localhost:5000/api/v1/add-income
+Content-type: application/json
+
+{
+    "title": "Hello T4332",
+    "amount": "33000",
+    "category": "Salary",
+    "description": "My income",
+    "date": "20-10-2024"
+}
+
