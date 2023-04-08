@@ -3,7 +3,7 @@ const cors = require('cors')
 const app = express()
 const { db } = require('./db/db');
 const {readdirSync} = require('fs');
-//const { routes } = require('./routes/transactions');
+const { route } = require('./routes/transactions');
 
 require('dotenv').config()
 

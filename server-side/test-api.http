@@ -6,6 +6,6 @@ Content-type: application/json
     "amount": "33000",
     "category": "Salary",
     "description": "My income",
-    "date": "20-10-2024"
+    "theDate": "20-10-2024"
 }
 
