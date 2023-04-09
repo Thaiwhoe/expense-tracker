@@ -1,19 +1,19 @@
 const IncomeSchema = require('../models/incomeModel')
 
 exports.addIncome = async(req, res) =>{
-    const {title, amount, category, description, theDate} = req.body
+    const {title, amount, category, description, date} = req.body
     
     const income = IncomeSchema({
         title,
         amount,
         category,
         description,
-        theDate
+        date
     })
 
     try {
         //Validations
-        if (!title || !category || !description || !theDate){
+        if (!title || !category || !description || !date){
             return res.status(400).json({message: 'All fields are required'})
         }
         if (amount <= 0 || !amount === 'number'){
@@ -24,6 +24,7 @@ exports.addIncome = async(req, res) =>{
     } catch (error){
         res.status(500).json({message: "Server error"})
     }
+    console.log(income)
 }
 
 exports.getIncomes = async (req, res) =>{
